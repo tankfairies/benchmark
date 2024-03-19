@@ -1,0 +1,45 @@
+{
+  "name": "tankfairies/benchmark",
+  "description": "benchmark code",
+  "type": "library",
+  "keywords": ["benchmark"],
+  "homepage": "https://tankfairies.com/",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Jon",
+      "email": "jon@tankfairies.com",
+      "role": "lead"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/tankfairies/benchmark/issues"
+  },
+  "prefer-stable": true,
+  "require": {
+    "php": "^8.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "Tankfairies\\Benchmark\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/"
+    }
+  },
+  "require-dev": {
+    "codeception/codeception": "^5.1",
+    "codeception/module-asserts": "^3.0",
+    "codeception/module-phpbrowser": "^3.0",
+    "dg/bypass-finals": "^1.6"
+  },
+  "config": {
+    "platform": {
+      "php": "8.2"
+    },
+    "optimize-autoloader": true,
+    "sort-packages": true
+  }
+}
