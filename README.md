@@ -23,6 +23,7 @@ composer require tankfairies/benchmark
 
 This will output an array of basic details on the machine you're running performance testing on.
 
+For server details: -
 ```php
 $server = new Server();
 $details = $server->getDetails();
@@ -41,6 +42,28 @@ Array (
     [PCRE JIT] => enabled
     [XDebug extension] => disabled
 )
+```
+For installed extensions: -
+
+```php
+$server = new Server();
+$extensions = $server->getInstalledExtensions();
+```
+
+Output Example: -
+
+```php
+Array
+(
+    [0] => Core
+    [1] => date
+    [2] => libxml
+    [3] => openssl
+    [4] => pcre
+    [5] => sqlite3
+    [6] => zlib
+    [7] => bcmath
+    ...
 ```
 
 ### Stopwatch
