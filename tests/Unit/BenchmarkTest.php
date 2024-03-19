@@ -9,6 +9,8 @@ use Tests\Support\UnitTester;
 use Codeception\Test\Unit;
 use Tankfairies\Benchmark\Stopwatch;
 use ReflectionProperty;
+use ReflectionException;
+use Exception;
 
 class BenchmarkTest extends Unit
 {
@@ -25,6 +27,11 @@ class BenchmarkTest extends Unit
     }
 
     // tests
+
+    /**
+     * @throws ReflectionException
+     * @throws Exception
+     */
     public function testConstruct()
     {
         $stopwatch = $this->make(
@@ -42,6 +49,10 @@ class BenchmarkTest extends Unit
         $this->assertEquals($stopwatch, $reflection->getValue($benchmark));
     }
 
+    /**
+     * @throws ReflectionException
+     * @throws Exception
+     */
     public function testMultiplier()
     {
 
@@ -59,6 +70,10 @@ class BenchmarkTest extends Unit
         $this->assertEquals(5, $reflection->getValue($benchmark));
     }
 
+    /**
+     * @throws ReflectionException
+     * @throws Exception
+     */
     public function testMultiplierWithZeroTimes()
     {
         $stopwatch = $this->make(Stopwatch::class);
@@ -75,6 +90,10 @@ class BenchmarkTest extends Unit
         $this->assertEquals(5, $reflection->getValue($benchmark));
     }
 
+    /**
+     * @throws ReflectionException
+     * @throws Exception
+     */
     public function testScript()
     {
         $stopwatch = $this->make(Stopwatch::class);
@@ -90,6 +109,9 @@ class BenchmarkTest extends Unit
         $this->assertEquals($func, $reflection->getValue($benchmark));
     }
 
+    /**
+     * @throws Exception
+     */
     public function testRun()
     {
         $stopwatch = $this->make(
@@ -118,6 +140,9 @@ class BenchmarkTest extends Unit
         $this->assertEquals([1 => '2.0000', 2 => '2.0000'], $results['time']);
     }
 
+    /**
+     * @throws Exception
+     */
     public function testRunMultipliersNotSet()
     {
         $stopwatch = $this->make(

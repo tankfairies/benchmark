@@ -6,6 +6,7 @@ namespace Tests\Unit;
 use Tankfairies\Benchmark\Stopwatch;
 use Tests\Support\UnitTester;
 use Codeception\Test\Unit;
+use Error;
 
 class StopwatchTest extends Unit
 {
@@ -31,7 +32,7 @@ class StopwatchTest extends Unit
     public function testNotStarted()
     {
         $this->tester->expectThrowable(
-            new \Error('Typed property Tankfairies\Benchmark\Stopwatch::$start must not be accessed before initialization'),
+            new Error('Typed property Tankfairies\Benchmark\Stopwatch::$start must not be accessed before initialization'),
             function () {
                 $stopwatch = new Stopwatch();
                 $stopwatch->elapsed();
