@@ -2,7 +2,7 @@
 [![Total Downloads](https://poser.pugx.org/tankfairies/benchmark/downloads)](https://packagist.org/packages/tankfairies/benchmark)
 [![Latest Unstable Version](https://poser.pugx.org/tankfairies/benchmark/v/unstable)](https://packagist.org/packages/tankfairies/benchmark)
 [![License](https://poser.pugx.org/tankfairies/benchmark/license)](https://packagist.org/packages/tankfairies/benchmark)
-[![Build Status](https://travis-ci.com/tankfairies/benchmark.svg?branch=1.0)](https://travis-ci.com/github/tankfairies/benchmark)
+[![Build Status](https://travis-ci.com/tankfairies/benchmark.svg?branch=main)](https://travis-ci.com/github/tankfairies/benchmark)
 
 # Benchmark
 
